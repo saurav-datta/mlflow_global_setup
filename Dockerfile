@@ -2,10 +2,11 @@ FROM python:3.11-slim
 
 ARG MLFLOW_VERSION
 
-WORKDIR /mlflowcheck
+WORKDIR /app
 
 RUN pip install --no-cache-dir mlflow==${MLFLOW_VERSION}
 
+# Container internal port (mapped to host port via MLFLOW_PORT in mlflow.env)
 EXPOSE 5000
 
 CMD mlflow server \

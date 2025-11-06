@@ -8,6 +8,9 @@ Containerized MLflow tracking server with persistent storage.
 # Build image
 sh scripts/build_image.sh
 
+# Stop and Build image
+uv run scripts/stop_container.py && sh scripts/build_image.sh
+
 # Start container (port 5500)
 uv run scripts/run_container.py
 
