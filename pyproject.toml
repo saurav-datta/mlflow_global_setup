@@ -1,0 +1,15 @@
+[project]
+name = "mlflow_global_setup"
+version = "0.1.0"
+description = "Global MLflow setup using Docker and Python 3.11"
+requires-python = ">=3.11"
+dependencies = [
+    "docker",
+    "python-dotenv"
+]
+
+[project.optional-dependencies]
+container = ["mlflow==3.5.0"]
+#container = ["mlflow==2.18.0"]
+
+
